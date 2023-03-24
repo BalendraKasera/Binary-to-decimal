@@ -1,0 +1,19 @@
+public class BinTDec {
+    public static void BinaryToDec(int BinNum) {
+        int num = BinNum;
+        int pow = 0;
+        int dec = 0;
+        while (BinNum > 0) {
+            int ld = BinNum % 10;
+            dec = dec + (ld * (int) Math.pow(2, pow));
+            BinNum = BinNum / 10;
+            pow++;
+        }
+        System.out.println("Decimal of  " + num + " = " + dec);
+    }
+
+    public static void main(String args[]) {
+        BinaryToDec(111);
+    }
+
+}
